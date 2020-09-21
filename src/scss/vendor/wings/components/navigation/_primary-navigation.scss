@@ -1,0 +1,88 @@
+.master-navigation {
+    background: $grey-900;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    @extend .scrollbar-dark;
+    @include responsive($mobile) {
+        max-height:3.875rem;
+        overflow: hidden;
+        &.open {
+            height: auto;
+            overflow: auto;
+        }
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem;
+        @extend .page-spacing-padding;
+        @include responsive($mobile) {
+            padding: 1rem;
+        }
+        a {
+            img {
+                &.logotype {
+                    max-width: 7.5rem;
+                }
+            }
+        }
+    }
+    nav {
+        padding: 1.5rem;
+        @extend .page-spacing-padding;
+        padding-top: 0;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        li {
+            display: block;
+            margin-top: 0.25rem;
+            a {
+                display: block;
+                color: $grey-300;
+                font-weight: 600;
+                font-size: 0.925rem;
+                padding: 0.875rem 1rem;
+                border-bottom: none;
+                border-radius: 5px;
+                @extend .text-overflow-ellipsis;
+            }
+            &.current {
+                a {
+                    color: $white;
+                    background: $primary-500;
+                    &:hover {
+                        background: $primary-400;
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    color: $white;
+                    background: $grey-800;
+                }
+            }
+        }
+        h4 {
+            color: $grey-500;
+            @extend .label-uppercase;
+        }
+        .v-popover .trigger, .new-test-btn{
+            display: grid !important;
+            margin-top: 0.5rem;
+        }
+    }
+    .expand-toggle {
+        margin-left: 15px;
+        a {
+            color: $grey-500;
+            font-size: 0.825rem;
+            font-style: italic;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

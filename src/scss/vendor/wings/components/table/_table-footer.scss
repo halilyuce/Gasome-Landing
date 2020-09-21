@@ -1,0 +1,40 @@
+.table-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    @include responsive($table-stacked) {
+        flex-direction: column;
+    }
+    @extend .page-spacing-padding;
+    .table-page-size {
+        @include responsive($table-stacked) {
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+    }
+    .paginate-list {
+        margin-left: auto;
+        @extend .pagination;
+        @include responsive($table-stacked) {
+            margin-right: auto;
+        }
+    }
+    p { 
+        margin-bottom: 0;
+        color: $grey-600;
+        font-size: 0.875rem;
+        @include responsive($small) {
+            display: none;
+        }
+        &:first-of-type {
+            margin-right: 0.5rem;
+        }
+        &:last-of-type {
+            margin-left: 0.5rem;
+        }
+    }
+}
+

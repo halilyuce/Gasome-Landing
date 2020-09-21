@@ -1,0 +1,73 @@
+.page-header {
+    background-color: $white;
+    border-bottom: 1px solid $grey-300;
+    padding: 0.75rem 2rem 2rem;
+    @extend .page-spacing-padding;
+    &-insight {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    h1,
+    h2 {
+        a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: none;
+            color: $grey-500;
+            &:before {
+                @extend .icon;
+                content:"\f05a";
+                font-size: 1.25rem;
+                font-weight: 200;
+                margin-right: 0.25rem;
+                line-height: 1.25rem;
+            }
+            span {
+                opacity: 0;
+                position: relative;
+                top: -0.1rem;
+                @include responsive($small) {
+                    display: none;
+                }
+            }
+            &:hover {
+                color: $primary-600;
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    p {
+        font-weight: 500;
+        color: $grey-600;
+        max-width: 80%;
+        @include responsive($small) {
+            max-width: 100%;
+        }
+    }
+    .action-buttons {
+        float: right;
+        .v-popover {
+            .button {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0
+            }
+        }
+    }
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    ul {
+        @extend .small-nav;
+    }
+    .breadcrumbs {
+        ul {
+            @extend .breadcrumbs;
+        }
+    }
+}

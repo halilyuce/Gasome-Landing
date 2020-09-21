@@ -1,0 +1,542 @@
+.insight {
+  &-wrapper {
+
+  }
+  &-categories-results {
+    padding: 20px;
+  }
+  &-header-action {
+    float: right;
+    .schedule-text {
+      font-size: 13px;
+      color: $grey-700;
+      line-height: 1.8;
+      font-style: italic;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+  &-header-check {
+    font-size: 14px;
+    font-weight: 700;
+    color: $grey-700;
+  }
+  &-queued {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  &-loading {
+    .radial-progress-container {
+      margin: 0 auto;
+      font-size: 1.2em;
+      .progress {
+        font-size: 2.2em;
+      }
+    }
+    text-align: center;
+    align-items: center;
+    p {
+      margin: 20px !important;
+    }
+    span {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+  }
+  &-button {
+    $chevronWidth: 16px;
+    $chevronRightMargin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px 12px 0;
+    border-bottom: 1px solid $grey-400;
+    &--open {
+      .insight-button__top i {
+        transform: rotate(90deg);
+      }
+    }
+    &-pointer,
+    &--level-1 {
+      cursor: pointer;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      .insight-button__wrapper {
+        @include responsive($mobile) {
+          margin-left: 15px;
+        }
+        margin-left: $chevronWidth + $chevronRightMargin;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__top {
+      display: flex;
+      align-items: baseline;
+      &-title {
+        font-size: 1.3125rem;
+        font-weight: 600;
+        color: $grey-900;
+        line-height: 1.2;
+        @extend .text-overflow-ellipsis;
+        max-width: 600px;
+      }
+    }
+    &__right-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 40%;
+      .insight-button__top-subtitle {
+        font-size: 0.8125rem;
+        color: $grey-500;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        line-height: 1.5;
+        @extend .text-overflow-ellipsis;
+      }
+    }
+    p.insight-button__description {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: $grey-700;
+      margin-top: 7px;
+      margin-bottom: 0;
+      line-height: 1.3;
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      word-break: break-word;
+
+      span {
+        margin-right: 5px;
+        flex-shrink: 0;
+      }
+
+      span,
+      a {
+        @extend .text-overflow-ellipsis;
+        max-width: 100%;
+      }
+      &--no-space {
+        margin: 0 !important;
+      }
+    }
+    .insight-button__top-title {
+      color: $grey-600;
+    }
+    &--level {
+      &-1 {
+        .insight-button__top-title {
+          font-size: 1.0rem;
+          font-weight: 500;
+        }
+      }
+      &-2 {
+        .insight-button__top-title {
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+      &-3 {
+        .insight-button__top-title {
+          font-size: 0.8rem;
+        }
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+  &-indicator {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 10px;
+    .indicator-bool-status {
+      &--fail:after {
+        @extend .icon;
+        content: "\f00d";
+        color: $destructive-500;
+      }
+      &--success:after {
+        @extend .icon;
+        content: "\f00c";
+        color: #00ce40;
+      }
+    }
+    span {
+      position: relative;
+      bottom: 2px;
+      width: 8px;
+      height: 8px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: $grey-400;
+      & + span {
+        margin-left: 2px;
+      }
+      &.indicator-status {
+        &--success {
+          background: #00ce40;
+        }
+        &--warning {
+          background: $warning-500;
+        }
+        &--error {
+          background: $destructive-500;
+        }
+      }
+    }
+  }
+  &-onboarding {
+    .jumbotron-icon {
+      text-align: center;
+      width: 100%;
+      font-size: 10em;
+      color: $primary-500;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p.description {
+      margin: 0 auto;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: $grey-700;
+      &.small {
+        max-width: 300px;
+      }
+    }
+    .button-next {
+      margin-top: 20px;
+    }
+    .inline-switch-panel__wrapper {
+      margin: 20px 0
+    }
+    .login-test-select {
+      text-align: left;
+      margin: 0px auto 10px auto;
+    }
+    .onboard-content .multiselect .multiselect__tags {
+      background: #edf2f7;
+    }
+    .website-url-form {
+      text-align: left;
+      margin: 0px auto;
+    }
+    .form-row {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .form-row.no-margin .form-item{
+      margin: 0;
+    }
+    height: 150px;
+    .checkbox-row {
+      margin-top: 10px;
+      justify-content: left;
+      span.label {
+        margin-top: 6px;
+      }
+      .data-box.component {
+        width: auto;
+        margin-right: 10px;
+      }
+    }
+  }
+  &-settings-panel {
+    position: relative;
+    .open-btn {
+      font-size: 1.5em;
+      position: absolute;
+      left: 120px;
+      &:hover {
+        text-decoration: none;
+        border: none;
+      }
+    }
+    .insight-settings {
+      width: 50%;
+      margin: 0 auto;
+      padding: 15px 0;
+
+      h1 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .multiselect-loading-panel {
+        width: 100%;
+      }
+
+      .form-row.no-margin .form-item {
+        margin: 0;
+      }
+
+      .form-item {
+        margin-bottom: 10px;
+
+        &.form-item-button {
+          width: 40%;
+          margin: 0 auto;
+        }
+      }
+
+      .checkboxes-panel {
+        margin: 20px 0;
+      }
+
+      .form-row.test-type {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .checkbox-row {
+        margin-top: 10px;
+        justify-content: left;
+
+        span.label {
+          margin-top: 6px;
+        }
+
+        .data-box.component {
+          width: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &-error {
+    text-align: center;
+    p {
+      font-size: 1.2em;
+      margin: 100px 0;
+    }
+    .insights-history-panel {
+      margin: 0 50px;
+    }
+  }
+  &-history-standalone-panel {
+    padding: 50px;
+  }
+}
+
+.insights-report-panel {
+  border-top: 2px solid $grey-200;
+
+  .report-header {
+    display: flex;
+    align-items: stretch;
+    height: 250px;
+  }
+
+  .left-column {
+    flex: 3;
+    width: 72%;
+  }
+
+  .right-column {
+    min-width: 200px;
+    flex: 1;
+    border-left: 2px solid $grey-200;
+    padding: 0 20px;
+  }
+
+  .report-content {
+    display: flex;
+    border-top: 2px solid $grey-200;
+
+    .categories-nav-tab {
+      margin-top: 10px;
+    }
+
+    .insight-category-results__wrapper {
+      margin-bottom: 30px;
+      .no-data-label {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 60px;
+      }
+
+      .category-header {
+        border-bottom: 2px solid $grey-200;
+        padding-bottom: 10px;
+        margin-top: 0;
+        h3 {
+          font-size: 1.2em;
+          font-weight: 500;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .insight-final-score {
+    .final-score-box {
+      position: relative;
+      width: 234px;
+      height: 160px;
+      background: linear-gradient(180deg, $primary-500, $primary-600);
+      text-align: center;
+      padding: 40px 10px 30px 10px;
+      border-radius: 10px;
+      color: $white;
+      margin: 30px auto;
+      box-shadow: $box-shadow-400;
+    }
+
+    .score {
+      font-size: 4em;
+      margin-bottom: 20px;
+      line-height: 40px;
+      font-weight: 500;
+    }
+
+    .score-label {
+      text-transform: uppercase;
+      font-size: 1.0em;
+      font-weight: 500;
+    }
+  }
+
+  .insight-score-bars-panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 5px 20px;
+
+    .progress-label {
+      font-size: 2.0em;
+      color: $grey-700;
+    }
+
+    .separator {
+      border-left: 2px solid $grey-200;
+      margin-bottom: 30px;
+    }
+
+    .circle-progress-bar {
+      cursor: pointer;
+      margin: 0 auto;
+      .radial-progress-container {
+        margin: 0 auto;
+      }
+      .progress-bar-label {
+        color: $grey-600;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.1em;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+
+      .progress-bar-label:after {
+        margin-top: 5px;
+        display: block;
+        @extend .icon;
+        transform: rotate(90deg);
+        content: "\f054";
+        font-size: 1.3em;
+        visibility: hidden;
+      }
+    }
+
+    .circle-progress-bar.selected {
+      .progress-bar-label:after {
+        visibility: visible;
+      }
+    }
+  }
+
+  .insight-history {
+    vertical-align: top;
+  }
+}
+
+.insights-history-panel {
+  .history-header {
+    font-weight: bold;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+  .history-row {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    .right {
+      color: $grey-500;
+    }
+  }
+  .history-row:last-child {
+    border-left: none;
+  }
+  .history-row {
+    border-bottom: 2px solid $grey-200;
+  }
+  .history-row:hover,
+  .history-row.selected {
+    border-radius: 5px;
+    background-color: $grey-200;
+  }
+}
+
+.insight-frameworks-vulnerabilities {
+  .framework-vulnerabilities__list {
+    margin: 10px 0;
+  }
+  .vulnerability-item {
+    margin-bottom: 20px;
+    .framework-vulnerability_title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      .severity {
+        text-transform: capitalize;
+        &.low {
+          color: #00ce40;
+        }
+        &.moderate {
+          color: $warning-500;
+        }
+        &.high {
+          color: $destructive-500;
+        }
+      }
+      .recommendation {
+        color: $grey-500;
+      }
+    }
+    .overview {
+      font-style: italic;
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+    .references {
+      margin-left: 20px;
+      .source {
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.inline-switch-panel__wrapper {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 20px;
+  margin: 5px 2px;
+  .checkbox-text {
+    color: $grey-600;
+  }
+}

@@ -1,0 +1,169 @@
+.switch {
+    border: 3px solid $grey-300;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+    flex-grow: 1;
+    width: 100%;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    color: $grey-700;
+    max-width: 200px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+    span {
+        font-size: 0.875em;
+        color: $grey-600;
+        font-weight: 600;
+    }
+    &:after {
+        width: 1.6em;
+        height: 1.6em;
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        color: $primary-500; 
+        border-radius: 3px;
+        @extend .icon;
+        display: block;
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+    &:before {
+        margin: 0 auto;
+        background: white;
+        border: 2px solid $grey-300;
+        color: $grey-500;
+        @extend .icon;
+        font-size: 2rem;
+        font-weight: 300;
+        top: -0.5rem;
+        display: inline-block;
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem 0;
+        border-radius: 10px;
+    }
+    &:hover {
+        border-color: $primary-300;
+        &:before {
+            border-color: $primary-300;
+            color: $primary-300;
+        }
+    }
+    &.selected {
+        border-color: $primary-500;
+        color: $primary-500;
+        &:before {
+            color: $primary-100;
+            color: white; 
+            background: $primary-400;
+            border-color: $primary-400;
+        }
+        &:after {
+            content: "\f00c";
+        }
+        span {
+            color: $primary-300;
+        }
+    }
+    &.disabled {
+        border-color: $primary-200;
+        &:after {
+            color: $primary-200;
+        }
+        &:before {
+            background: $primary-200;
+            border-color: $primary-200;
+        }
+        color: $primary-200;
+        span {
+            color: $primary-200;
+        }
+    }
+    &.all-browsers {
+        &:before {
+            content: "\f2d2";
+        }
+    }
+    &.chrome,
+    &.internet-explorer,
+    &.edge,
+    &.firefox {
+        &:before {
+            @extend .icon-brand;
+        }
+    }
+    &.chrome {
+        &:before {
+            content: "\f268";
+        }
+    }
+    &.internet-explorer {
+        &:before {
+            content: "\f26b";
+        }
+    }
+    &.edge {
+        &:before {
+            content: "\f282";
+        }
+    }
+    &.firefox {
+        &:before {
+            content: "\f269";
+        }
+    }
+    &.all-screen {
+        &:before {
+            content:"\f87a";
+        }
+    }
+    &.desktop {
+        &:before {
+            content:"\f390";
+        }
+    }
+    &.laptop {
+        &:before {
+            content:"\f109";
+        }
+    }
+    &.tablet {
+        &:before {
+            content:"\f3fa";
+        }
+    }
+    &.phone {
+        &:before {
+            content:"\f3cd";
+        }
+    }
+    &.test-type-tag {
+        &:before {
+            content:"\f02b";
+        }
+    }
+    &.test-type-all {
+        &:before {
+            content:"\f5fd";
+        }
+    }
+}
+a.icon-back {
+    &:before {
+        @extend .icon;
+        content: "\f053";
+        font-size: 0.75em;
+        padding-right: 0.5em;
+        position: relative;
+        top: -1px;
+    }
+}

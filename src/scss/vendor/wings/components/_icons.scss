@@ -1,0 +1,72 @@
+.icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Pro";
+}
+
+.icon-brand {
+    @extend .icon;
+    font-family: "Font Awesome 5 Brands";
+}
+
+
+.icon-laptop {
+    &:before {
+        content: "\f109";
+    }
+}
+.icon-desktop {
+    &:before {
+        content: "\f390";
+    }
+}
+.icon-tablet {
+    &:before {
+        content: "\f3fa";
+    }
+}
+.icon-phone {
+    &:before {
+        content: "\f3cd";
+    }
+}
+.icon-chrome {
+    @extend .icon-brand;
+    &:before {
+        content: "\f268";
+    }
+}
+.icon-safari {
+    @extend .icon-brand;
+    &:before {
+        content: "\f267";
+    }
+}
+.icon-firefox {
+    @extend .icon-brand;
+    &:before {
+        content: "\f269";
+    }
+}
+.icon-edge {
+    @extend .icon-brand;
+    &:before {
+        content: "\f282";
+    }
+}
+.icon-ie {
+    @extend .icon-brand;
+    &:before {
+        content: "\f26b";
+    }
+}
+
+.icon-image-gallery {
+    &:before {
+        content: "\f685";
+    }
+}

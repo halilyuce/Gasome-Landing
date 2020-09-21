@@ -1,0 +1,126 @@
+$page-spacing:          2rem;
+$page-spacing-large:    2rem;
+$page-spacing-medium:   2rem;
+$page-spacing-small:    2rem;
+$page-spacing-mobile:   1rem;
+
+
+.page-spacing-padding {
+    padding-left: $page-spacing;
+    padding-right: $page-spacing;
+    @include responsive($large) {
+        padding-left: $page-spacing-large;
+        padding-right: $page-spacing-large; 
+    }
+    @include responsive($medium) {
+        padding-left: $page-spacing-medium;
+        padding-right: $page-spacing-medium; 
+    }
+    @include responsive($small) {
+        padding-left: $page-spacing-small;
+        padding-right: $page-spacing-small; 
+    }
+    @include responsive($mobile) {
+        padding-left: $page-spacing-mobile;
+        padding-right: $page-spacing-mobile; 
+    }
+}
+.page-spacing-left-padding {
+    padding-left: $page-spacing;
+    @include responsive($large) {
+        padding-left: $page-spacing-large;
+    }
+    @include responsive($medium) {
+        padding-left: $page-spacing-medium;
+    }
+    @include responsive($small) {
+        padding-left: $page-spacing-small;
+    }
+    @include responsive($mobile) {
+        padding-left: $page-spacing-mobile;
+    }
+}
+.page-spacing-right-padding {
+    padding-right: $page-spacing;
+    @include responsive($large) {
+        padding-right: $page-spacing-large;
+    }
+    @include responsive($medium) {
+        padding-right: $page-spacing-medium;
+    }
+    @include responsive($small) {
+        padding-right: $page-spacing-small;
+    }
+    @include responsive($mobile) {
+        padding-right: $page-spacing-mobile;
+    }
+}
+
+.page-spacing-margin {
+    margin-left: $page-spacing;
+    margin-right: $page-spacing;
+    @include responsive($large) {
+        margin-left: $page-spacing-large;
+        margin-right: $page-spacing-large;
+    }
+    @include responsive($medium) {
+        margin-left: $page-spacing-medium;
+        margin-right: $page-spacing-medium; 
+    }
+    @include responsive($small) {
+        margin-left: $page-spacing-small;
+        margin-right: $page-spacing-small; 
+    }
+    @include responsive($mobile) {
+        margin-left: $page-spacing-mobile;
+        margin-right: $page-spacing-mobile; 
+    }
+}
+
+.page-spacing-left-margin {
+    margin-left: $page-spacing;
+    @include responsive($large) {
+        margin-left: $page-spacing-large;
+    }
+    @include responsive($medium) {
+        margin-left: $page-spacing-medium;
+    }
+    @include responsive($small) {
+        margin-left: $page-spacing-small;
+    }
+    @include responsive($mobile) {
+        margin-left: $page-spacing-mobile;
+    }
+}
+
+.page-spacing-right-margin {
+    margin-right: $page-spacing;
+    @include responsive($large) {
+        margin-right: $page-spacing-large;
+    }
+    @include responsive($large) {
+        margin-right: $page-spacing-large;
+    }
+    @include responsive($medium) {
+        margin-right: $page-spacing-medium;
+    }
+    @include responsive($small) {
+        margin-right: $page-spacing-small;
+    }
+    @include responsive($mobile) {
+        margin-right: $page-spacing-mobile;
+    }
+}
+
+@mixin placeholder {
+::-webkit-input-placeholder {@content}
+:-moz-placeholder           {@content}
+::-moz-placeholder          {@content}
+:-ms-input-placeholder      {@content}  
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+} 

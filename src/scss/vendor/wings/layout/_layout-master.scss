@@ -1,0 +1,84 @@
+body {
+    background: $grey-200;
+}
+
+$master-navigation-width: 270px;
+$master-navigation-width-small: 220px;
+$master-navigation-width-mobile: 100%;
+
+$dashboard-max-width: 1920px;
+
+// Master Layout 
+
+.banner-enabled {
+    height: calc(100vh - 60px) !important;
+    @include responsive($mobile) {
+        margin-top: 60px;
+    }
+    .master-contents {
+        height: calc(100vh - 60px) !important;  
+    }
+    .secondary-sidebar {
+        height: calc(100vh - 60px) !important;
+    }
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+    max-width: $dashboard-max-width; 
+    border-right: 1px solid $grey-300; 
+    box-shadow: 0px 3px 3px 0px rgba($grey-600, 0.2);
+    @include responsive($mobile) {
+          flex-direction: column;  
+    }
+    .master-navigation {
+        min-width: $master-navigation-width;
+        width: $master-navigation-width;
+        @include responsive($small) {
+            min-width: $master-navigation-width-small;
+            max-width: $master-navigation-width-small;
+        }
+        @include responsive($mobile) {
+            max-width: $master-navigation-width-mobile;
+            width:  $master-navigation-width-mobile;
+            min-height: 3.5rem;
+            overflow: hidden;
+            &.open {
+                min-height: 90vh;
+                overflow: auto;
+            }
+        }
+    }
+}
+
+// Column View
+
+.master-panel {
+    background: $white;
+    width: calc(#{$dashboard-max-width} - #{$master-navigation-width});
+    max-width: calc(100% - #{$master-navigation-width}); 
+    @include responsive($small) {
+        max-width: calc(100% - #{$master-navigation-width-small});
+    }
+    @include responsive($mobile) {
+        max-width: 100%;
+  }
+    .master-contents {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        @extend .scrollbar-white;
+    }
+    &.row {
+        display: flex; 
+        flex-direction: row;
+        @include responsive($mobile) {
+            flex-direction: column;
+            overflow: auto;
+        }
+    }
+}

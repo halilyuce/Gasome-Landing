@@ -1,0 +1,104 @@
+@mixin modal-base() {
+    transition: opacity 0.2s ease;
+    position: fixed;
+    z-index: 9998;
+}
+
+@mixin modal-mask() {
+    @include modal-base();
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    background-color: #EDF2F7;
+    display: table;
+}
+
+.gallery-overlay {
+    @include modal-mask();
+}
+.gallery-screenshot {
+    height: 100%;
+    div.no-image {
+        height: 100%;
+        width: 45vw;
+        object-fit: contain;
+        display: flex;
+        justify-content: center; /* align horizontal */
+        align-items: center;
+        flex-direction: column;
+        img {
+            height: auto;
+        }
+        div {
+            background: #E9E9E9;
+            p {
+                text-align: center;
+                padding: 0 10px 20px 10px;
+            }
+        }
+    }
+}
+
+.gallery-video {
+    height: 100%;
+    width: 100%;
+    & > div {
+        height: 100%;
+    }
+    button {
+        border-color: transparent !important;
+        margin: 0;
+    }
+    .plyr__video-wrapper {
+        padding-bottom: 0 !important;
+        height: 100%;
+    }
+    .plyr__control.plyr__tab-focus {
+        box-shadow: none;
+    }
+    .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true],
+    .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+        background-color: #3F3BC4;
+    }
+    .plyr__menu__container .plyr__control--back::before {
+        background-color: #E2E8F0;
+    }
+    .plyr--full-ui input[type=range] {
+        color: #3F3BC4;
+    }
+    .plyr__menu__container {
+        background-color: #fff;
+    }
+}
+.gallery-thumbnail-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  position: relative;
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: auto;
+    color: #3f3bc4;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    i {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.test-result-gallery-error {
+    position: relative;
+}

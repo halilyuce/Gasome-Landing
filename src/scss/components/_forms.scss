@@ -1,0 +1,254 @@
+.form-credit-card {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 2rem 0 0 0;
+    align-items: center;
+    @include responsive($small) {
+        flex-direction: column;
+    }
+    .form-item-credit-card {
+        background: $grey-200;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .form-item-button {
+        flex-shrink: 40;
+        margin-left: 1rem;
+        @include responsive($small) {
+            margin-left: 0;
+        }
+    }
+}
+
+.select-panel {
+    overflow: visible !important;
+}
+
+.change-password-button {
+    position: absolute;
+    top: 0; right: 0;
+    cursor: pointer;
+}
+
+.account-webhooks {
+    .button-destructive {
+        margin-left: 10px;
+    }
+}
+
+//link without href
+.btn-link {
+    cursor: pointer;
+    &.disabled,
+    &.disabled .data-box-content {
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+      opacity: .4;
+    }
+}
+
+
+//validation error below inputs
+.inline-error {
+  @extend .nb;
+  font-size: 0.7rem;
+  color: $destructive-600 !important;
+  margin-left: 3px;
+}
+
+// input which will become editable on click
+.editable-text {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: inherit;
+    display: inline;
+    max-width: 50%;
+    font-style: italic;
+    border-bottom: 1px dashed $grey-400;
+}
+
+// textarea which will become editable on click
+.editable-textarea {
+    font-size: inherit;
+    max-width: 100%;
+    min-height: 1.6rem;
+    border: 1px dashed $grey-400;
+}
+
+// checkbox
+.ui-checkbox {
+    width: 3rem;
+    height: 3rem;
+    &.disabled {
+        .checkbox-giant {
+            cursor: auto;
+
+            &:before {
+                color: $grey-500;
+            }
+            &:hover:before {
+                content: "\f00d";
+                background: $grey-300;
+                color: $grey-500;
+            }
+        }
+    }
+}
+
+// Checkbox Group
+.form-group-select {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 0 0.5rem 0;
+    ul {
+      display: flex;
+      width: 100%;
+      @include responsive($mobile) {
+        flex-direction: column;
+      }
+    }
+    li {
+      margin-right: 10px;
+      @include responsive($mobile) {
+        margin-bottom: 5px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+    .multiselect__element {
+      display: flex;
+      width: 33%;
+      @include responsive($mobile) {
+        width: 100%;
+      }
+    }
+    .multiselect__option {
+      width: 100%;
+    }
+    .dropdown-selectable-option {
+      background: $white !important;
+      border-radius: 5px;
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+// Dropdown Select
+.form-group-dropdown-select {
+  margin-bottom: 0.5rem;
+  .multiselect {
+    &__tags {
+      background: $white;
+    }
+    &_dropdown_content {
+      padding: 0.5rem 1rem;
+      overflow-y: scroll;
+      li {
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+        align-items: baseline;
+        margin: 0.25rem 0;
+        padding: 0.5rem 0.75rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(214, 213, 246, 0.43);
+        }
+        &.selected {
+          background-color: rgba(214, 213, 246, 0.43);
+        }
+      }
+      &_wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        z-index: 50;
+        top:2px;
+        background: $white;
+        border: 1px solid $grey-200;
+        border-top: none;
+        border-radius: 5px;
+        box-shadow: 0px 5px 12px rgba(113, 128, 150, 0.06), 0px 10px 13.8px rgba(113, 128, 150, 0.06), 0px 20px 15px rgba(113, 128, 150, 0.08);
+        max-height: 450px !important;
+        overflow-x: hidden;
+        width: 314px;
+        &_title {
+          padding: 0.25rem 0.75rem;
+        }
+        &_search {
+          position: relative;
+          input{
+            margin: 0 0.75rem;
+            padding: 0.5rem 2rem 0.5rem 2.15rem;
+            width: calc(100% - 1.5rem);
+            border: 1px solid $white;
+            &:hover{
+              border: 1px solid $grey-200;
+            }
+            &:focus{
+              border: 1px solid $grey-200;
+            }
+          }
+          i.fa-search {
+            position: absolute;
+            left: 1.5rem;
+            top: 0.7rem;
+            font-size: 13px;
+          }
+          i.fa-times {
+            position: absolute;
+            right: 1.5rem;
+            top: 0.7rem;
+            font-size: 13px;
+            cursor: pointer;
+          }
+        }
+        &_footer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: $grey-200;
+          padding: 0.5rem 0.75rem;
+          .button-primary {
+            width: 100%;
+            margin-left: 10px;
+          }
+          .button-200{
+            padding: 0.75rem 0.5rem;
+          }
+        }
+      }
+    }
+    &_dropdown_option{
+      display: flex;
+      flex: 1 1 auto;
+      .checkbox {
+        margin: 0;
+        margin-right: 0.5rem;
+      }
+    }
+    &_dropdown_selectable_option{
+      line-height: normal;
+      color: #2D3748;
+      display: inline-block;
+      width: 100%;
+      font-size: 0.875rem;
+      font-weight: 600;
+      &_info{
+        color: $grey-500;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

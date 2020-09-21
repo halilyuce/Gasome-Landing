@@ -1,0 +1,522 @@
+.onboarding {
+  &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+      @include responsive($mobile) {
+        font-size: 1.5rem;
+      }
+      font-size: 2rem;
+      color: $grey-800;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    p {
+      @include responsive($mobile) {
+        font-size: 0.875rem;
+      }
+      font-size: 1rem;
+      color: $grey-700;
+      font-weight: 500;
+      line-height: 1.5rem;
+      max-width: 398px;
+      text-align: center;
+      margin-top: 17px;
+      a {
+        color: $primary-500;
+      }
+    }
+  }
+  &-error-message {
+    font-size: 0.875rem;
+    color: $destructive-600;
+    margin-right: auto;
+    margin-top: 15px;
+    line-height: 1.2;
+    .btn-link {
+      color: $destructive-800;
+      border-bottom: 1px solid;
+    }
+  }
+  &-pricing-boxes-wrapper {
+    padding: 52px 107px 59px;
+    .pricing-boxes {
+      display: flex;
+      @include responsive($mobile) {
+        margin-top: 30px;
+        justify-content: flex-start;
+      }
+      justify-content: center;
+      margin-top: 56px;
+      &-container {
+        display: flex;
+        overflow-x: auto;
+        justify-content: center;
+      }
+    }
+  }
+  &-credit-card {
+    padding: 52px 82px 65px;
+    .form-credit-card {
+      display: flex;
+      flex-direction: column;
+      @include responsive($mobile) {
+        margin-top: 30px;
+      }
+      @include responsive($table-stacked) {
+        min-width: auto;
+      }
+      min-width: 720px;
+      margin-top: 56.5px;
+    }
+    .form-item-credit-card {
+      margin-bottom: 0px;
+    }
+    button {
+      @include responsive($mobile) {
+        margin-top: 30px;
+      }
+      margin-top: 55.5px;
+    }
+  }
+  &-review {
+    padding: 52px 70px 59px 63px;
+    .review-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 39px;
+      @include responsive($table-stacked) {
+        min-width: auto;
+      }
+      min-width: 751px;
+      .review-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 8px;
+        span {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $grey-900;
+          line-height: 1.2;
+        }
+      }
+      .review-content {
+        display: flex;
+        flex-direction: column;
+        padding: 22px 0;
+        border-bottom: 1px solid $grey-600;
+        border-top: 1px solid $grey-600;
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: $grey-900;
+            line-height: 1.25;
+          }
+          &-features {
+            display: flex;
+            flex-direction: column;
+            span {
+              margin-bottom: 6px;
+            }
+            ul {
+              li {
+                font-size: 0.8125rem;
+                font-weight: 500;
+                color: $grey-600;
+                line-height: 1.65;
+              }
+            }
+          }
+        }
+      }
+      .review-bottom {
+        display: flex;
+        @include responsive($mobile) {
+          flex-direction: column;
+        }
+        justify-content: space-between;
+        margin-top: 12px;
+        &-description {
+          p {
+            font-size: 0.8125rem;
+            max-width: 500px;
+            color: $grey-700;
+            span {
+              font-weight: 500;
+              color: $grey-800;
+            }
+          }
+        }
+        &-action {
+          display: flex;
+          flex-direction: column;
+          @include responsive($mobile) {
+            margin-left: 0px;
+            margin-top: 30px;
+          }
+          margin-left: auto;
+          span {
+            font-size: 1rem;
+            font-weight: bold;
+            color: $grey-900;
+            line-height: 1.2;
+          }
+          small {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: $grey-900;
+            line-height: 1.25;
+          }
+          button {
+            @include responsive($mobile) {
+              width: 100%;
+              margin-top: 15px;
+            }
+            width: 208px;
+            margin-top: 31px;
+          }
+        }
+        &-price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .onboarding-error-message {
+        text-align: center;
+        margin-top: 30px;
+        margin-right: 0;
+      }
+    }
+  }
+  &-result {
+    padding: 62px 243px 62px;
+    text-align: center;
+    .onboarding__heading {
+      span {
+        @include responsive($mobile) {
+          width: auto;
+          word-break: break-word;
+          white-space: normal;
+          text-align: center;
+        }
+        white-space: nowrap;
+        width: 398px;
+      }
+    }
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $success-600;
+      @include responsive($mobile) {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+      }
+      width: 123px;
+      height: 123px;
+      margin: 0 auto 58px;
+      i {
+        @include responsive($mobile) {
+          font-size: 38px;
+        }
+        font-size: 56px;
+        color: #fff;
+      }
+    }
+    button {
+      margin: 44px auto 0;
+      min-width: 138px;
+    }
+  }
+}
+
+.onboard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  @include responsive($mobile) {
+    max-width: 90%;
+  }
+  &-wrapper {
+    padding: 52px 107px 59px;
+  }
+  &-brands {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+    &-logo-left {
+      display: flex;
+      flex-grow: 1;
+      width: 40%;
+      justify-content: flex-end;
+      align-items: flex-end;
+      img {
+        height: 100px;
+        @include responsive($mobile) {
+          height: 80px;
+        }
+        width: 140px;
+      }
+    }
+    &-logo-right {
+      display: flex;
+      flex-grow: 1;
+      width: 40%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      img {
+        height: 100px;
+        @include responsive($mobile) {
+          height: 80px;
+        }
+        width: 140px;
+      }
+    }
+    &-chevron {
+      display: flex;
+      flex-grow: 1;
+      width: 20%;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 40px;
+        @include responsive($mobile) {
+          height: 36px;
+        }
+      }
+    }
+  }
+  &-desc {
+    margin: 0 auto 3rem;
+    max-width: 80%;
+    @include responsive($mobile) {
+      font-size: 0.875rem;
+      margin: 0 auto 2rem;
+      max-width: 100%;
+    }
+  }
+  &-button {
+    display: flex;
+    justify-content: center;
+  }
+  &-number-list {
+    margin: 2rem auto 3rem;
+    &-item {
+      display: flex;
+      flex-direction: row;
+      text-align: start;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+      &-content {
+        display: flex;
+        flex-direction: column;
+      }
+      &-title {
+        h3 {
+          @include responsive($mobile) {
+            font-size: 1rem;
+          }
+        }
+      }
+      &-number {
+        color: $grey-500;
+        margin-right: 2rem;
+        top: 1rem;
+        position: relative;
+        @include responsive($mobile) {
+          margin-right: 1rem;
+        }
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          width: 56px;
+          height: 56px;
+          border-radius: 28px;
+          border: 2px solid $grey-400;
+          @include responsive($mobile) {
+            font-size: 1.25rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 21px;
+          }
+        }
+      }
+      &-desc {
+        @include responsive($mobile) {
+          font-size: 0.875rem;
+        }
+        font-size: 1rem;
+        color: $grey-700;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  &-generate-api {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey-200;
+    padding: 1rem;
+    margin-left: 90px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: calc(100% - 90px);
+    @include responsive($mobile) {
+      margin-left: 0px;
+      width: 100%;
+    }
+    &-col-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 33%;
+      @include responsive($mobile) {
+        width: 50%;
+      }
+      &.jenkins-keys{
+        width: 20%;
+        @include responsive($mobile) {
+          width: 33%;
+        }
+      }
+      h4 {
+        text-decoration: underline;
+        color: $grey-600;
+        line-height: 1.85;
+        font-size: 0.9rem;
+        @include responsive($mobile) {
+          font-size: 0.75rem;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          margin-right: 10px;
+        }
+      }
+    }
+    &-col-right {
+      display: flex;
+      flex-direction: column;
+      width: 66%;
+      @include responsive($mobile) {
+        width: 50%;
+      }
+      &.jenkins-keys{
+        width: 80%;
+        @include responsive($mobile) {
+          width: 66%;
+        }
+      }
+      &-code {
+        margin: 0.25rem 0;
+        background-color: $white;
+        padding: 2px 15px;
+        border-radius: 5px;
+        position: relative;
+        button {
+          position: absolute;
+          top: 4px;
+          right: 5px;
+          font-size: 0.75rem;
+          padding: 0.5em 1.25em;
+        }
+        p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 80%;
+          overflow: hidden;
+          @include responsive($mobile) {
+            width: 45%;
+          }
+        }
+      }
+    }
+    &-desc {
+      font-size: 0.875rem;
+      color: $grey-500;
+      text-align: start;
+      line-height: 1.5;
+      margin-left: 90px;
+      margin-top: 2rem;
+      @include responsive($mobile) {
+        margin-left: 0px;
+      }
+    }
+  }
+  &-configure-form {
+    display: flex;
+    flex-direction: column;
+    background-color: $grey-300;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    &-output{
+      position: relative;
+      background-color: $grey-200;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-family: monospace;
+      button{
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        padding: 0.5em 1.25em;
+      }
+      .button-dark:disabled {
+        background-color: $grey-400;
+        cursor: not-allowed;
+        &:hover {
+          background-color: $grey-400; 
+        }
+      }
+    }
+  }
+  &-code-view {
+    position: relative;
+    button {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      font-size: 0.75rem;
+      padding: 0.5em 1.25em;
+    }
+    pre {
+      display: inline-flex;
+      font-size: 0.85rem;
+      line-height: inherit;
+      overflow-y: scroll;
+      height: 200px;
+      width: 100%;
+      padding: 10px;
+      background: $white;
+      border: none;
+    }
+    code {
+      background: $white;
+      border: none;
+      padding: 0;
+      color: $black;
+      white-space: pre-wrap;
+      line-height: inherit;
+    }
+  }
+  .multiselect .multiselect__tags {
+    background: $white;
+  }
+}

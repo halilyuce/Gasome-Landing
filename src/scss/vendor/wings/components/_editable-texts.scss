@@ -1,0 +1,18 @@
+.editable-text-area-panel {
+  .placeholder {
+    color: $grey-500;
+  }
+  .editing {
+    font-weight: normal;
+    color: black;
+  }
+}
+
+.editable-text-panel {
+  .placeholder {
+    color: $grey-500;
+  }
+  .data-box.component {
+    width: fit-content
+  }
+}

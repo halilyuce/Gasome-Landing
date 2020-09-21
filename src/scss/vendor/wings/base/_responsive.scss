@@ -1,0 +1,12 @@
+@mixin responsive($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+ }
+
+$mobile:        740;
+$table-stacked: 860;
+$small:         1024;
+$medium:        1320;
+$large:         1440;
+

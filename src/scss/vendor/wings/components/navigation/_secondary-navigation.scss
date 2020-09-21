@@ -1,0 +1,262 @@
+.secondary-sidebar {
+    max-width: 420px;
+    min-width: 420px;
+    height: 100vh;
+    background: $grey-100;
+    border-right: 1px solid $grey-300;
+    @extend .scrollbar-light;
+    header {
+        padding-top: 2rem;
+    }
+    @include responsive($mobile) {
+        height: auto;
+        overflow: visible;
+        .secondary-sidebar-menu-item {
+            display: none;
+            &.current {
+                display: block;
+            }
+        }
+        &.open {
+            min-height: 80vh;
+            overflow: visible;
+            .secondary-sidebar-menu-item {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.secondary-sidebar-menu-item {
+    a {
+        display: block;
+        padding: 1.5rem 3.5rem 1.5rem 6rem;
+        background: $grey-100;
+        border-bottom: 1px solid $grey-200;
+        position: relative;
+        h4 {
+            color: $grey-600;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            letter-spacing: 0.3px;
+        }
+        p {
+            color: $grey-500;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        &:after,
+        &:before {
+            @extend .icon;
+            position: absolute;
+            font-size: 1.5rem;
+            color: $grey-400;
+            content: "\f0c0";
+            top: calc(50% - 0.75rem);
+            width: 2rem;
+            text-align: center;
+        }
+        &:before {
+            left: 2rem;
+            top: calc(50% - 0.9rem);
+            font-size: 1.8rem;
+            font-weight: 200;
+            content: "\f0c0";
+        }
+        &:after {
+            content: "\f054";
+            right: 1.5rem;
+            text-align: right;
+
+        }
+    }
+    &.current {
+        a {
+            background: $white;
+            h4 {
+                color: $primary-500;
+            }
+            &:before,
+            &:after {
+                color: $primary-500;
+            }
+        }
+    }
+    &:hover {
+        a {
+            background: $white;
+            &:after {
+                color: $primary-500;
+            }
+        }
+    }
+}
+
+
+.secondary-sidebar-menu-item {
+    &.account-details {
+        a {
+            &:before {
+                content: "\f007";
+            }
+        }
+    }
+    &.account-company {
+        a {
+            &:before {
+                content: "\f1ad";
+            }
+        }
+    }
+    &.account-billing {
+        a {
+            &:before {
+                content: "\f570";
+            }
+        }
+    }
+    &.account-users {
+        a {
+            &:before {
+                content: "\f0c0";
+            }
+        }
+    }
+    &.account-api {
+        a {
+            &:before {
+                content: "\f1e6";
+            }
+        }
+    }
+    &.account-integrations {
+        a {
+            &:before {
+                content: "\f074";
+            }
+        }
+    }
+    &.account-notifications {
+        a {
+            &:before {
+                content: "\f77f";
+            }
+        }
+    }
+    &.account-webhooks {
+        a {
+            &:before {
+                content: "\f719";
+            }
+        }
+    }
+    &.test-settings-browsers {
+        a {
+            &:before {
+                content: "\f2d2";
+            }
+        }
+    }
+    &.test-settings-screensizes {
+        a {
+            &:before {
+                content: "\f390";
+            }
+        }
+    }
+    &.test-settings-environments {
+        a {
+            &:before {
+                content: "\f276";
+            }
+        }
+    }
+    &.test-settings-groups {
+        a {
+            &:before {
+                content: "\f02b";
+            }
+        }
+    }
+    &.test-settings-defaults {
+        a {
+            &:before {
+                content: "\f1de";
+            }
+        }
+    }
+    &.test-settings-insights {
+        a {
+            &:before {
+                content: "\f5f3";
+            }
+        }
+    }
+}
+.secondary-sidebar {
+    @include responsive($medium) {
+        width: 100%;
+        min-width: 120px;
+        max-width: 120px;
+        header {
+            &.page-header {
+                display: none;
+            }
+        }
+        .secondary-sidebar-menu-item {
+            a {
+                padding: 4.5rem 0 1rem;
+                p {
+                    display: none;
+                }
+                &:after {
+                    content: none;
+                }
+                &:before {
+                    width: 100%;
+                    padding: 0;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    top: 1.5rem;
+                }
+                h4 {
+                    font-size: 0.75rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include responsive($mobile) {
+        max-width: 100%;
+        .secondary-sidebar-menu-item {
+            a {
+                padding: 1.5rem 3.5rem 1.5rem 6rem;
+                &:after {
+                    content: "\f078";
+                }
+                &:before {
+                    width: 2rem;
+                    left: 2rem;
+                    right: auto;
+                    top: calc(50% - 0.9rem);
+
+                }
+                h4 {
+                    text-align: left;
+                    font-size: 1rem;
+                }
+            }
+
+            &.current {
+                a {
+                    &:after {
+                        content: "\f077";
+                    }
+                }
+            }
+        }
+    }
+}

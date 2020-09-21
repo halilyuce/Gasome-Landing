@@ -1,0 +1,51 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.875rem;
+    li {
+        a {
+            padding: 0.4em 0.85em;
+            border-radius: 5px;
+            margin: 0 0.25rem;
+            line-height: 1;
+            font-weight: 600;
+            border-bottom: 0;
+            color: $primary-400;
+            border: 2px solid $grey-200;
+            cursor: pointer;
+            &:hover {
+                background: $grey-200;
+                color: $primary-600;
+            }
+        }
+        &:first-of-type {
+            a {
+                margin-left: 0;
+            }
+        }
+        &:last-of-type {
+            a {
+               margin-right: 0; 
+            }
+        }
+        &.disabled {
+            a { 
+                border-color: transparent;
+                color: $grey-500;
+                cursor: default;
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+        &.current,
+        &.active {
+            a {
+                background: $primary-600;
+                color: $white;
+                border-color: $primary-600;
+                cursor: default;
+            }
+        }
+    }
+}

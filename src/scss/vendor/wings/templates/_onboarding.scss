@@ -1,0 +1,23 @@
+.panel-stand-out.dashboard-panel-onboarding {
+    max-width: 650px;
+    header {
+        text-align: center;
+        .hero {
+            padding: 2rem;
+            iframe {
+                max-width: 100%;
+            }
+            img {
+                max-width: 66%;
+                margin: 0 auto;
+            }
+        }
+        button {
+            margin-bottom: 1.5rem;
+        }
+        p {
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+    }
+}

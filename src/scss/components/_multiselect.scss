@@ -1,0 +1,225 @@
+
+// wrapper div of each select
+.multiselect {
+    height: 40px;
+    min-width: 120px;
+    // select arrow
+    .multiselect__select {
+        @extend .touch-transparent;
+
+        &:before {
+            content: "\f078";
+            font-family: "Font Awesome 5 Pro";
+            border: none;
+            top: calc(50% - 0.5em);
+        }
+    }
+
+    .multiselect__tags {
+        background: #EDF2F7;
+        padding: 0 50px 0 0;
+        overflow: hidden;
+        border-radius: 5px;
+        color: #2D3748;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .multiselect__tags-wrap {
+        padding: 0.4rem 0 0rem;
+        display: inline-block;
+        margin: 0px 0 0px 10px;
+        line-height: 1.75;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        text-overflow: ellipsis;
+    }
+
+    .multiselect__placeholder {
+        margin: 0;
+        line-height: 1.75;
+        color: $grey-600;
+    }
+
+    .multiselect__tags input,
+    .multiselect__placeholder,
+    .multiselect__tags .multiselect__single {
+        background: transparent;
+        padding: 0.5rem 0rem 0;
+        margin: 0px 0 0px 10px;
+        font-size: 14px;
+    }
+    .multiselect__content .using-defaults {
+        user-select: none;
+        &:after {
+            position: absolute;
+            cursor: default;
+            left: 0;
+            top: 0;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: white;
+            opacity: 0.5;
+            z-index: 10;
+        }
+    }
+    .multiselect__content-wrapper {
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0px 3px 3px 0px rgba(113, 128, 150, 0.2);
+        max-height: 450px !important;
+        overflow-x: hidden;
+        width: auto;
+        min-width: 100%;
+        max-width: 400px;
+    }
+    ul {
+        padding: 0;
+        max-height: 450px;
+    }
+    li {
+        .multiselect__option {
+            padding: 0;
+            min-height: 0;
+            &.multiselect__option--group.multiselect__option--disabled {
+                background: inherit !important;
+                color: inherit !important;
+            }
+            &.multiselect__option--selected {
+                .dropdown-selectable-option {
+                    background: #EDF2F7;
+                    border-color: #EDF2F7;
+                    color: #2D3748;
+
+                    &:before {
+                        background: #3F3BC4;
+                        border-color: #3F3BC4;
+                        color: #fff;
+                    }
+                    &.checkbox-option.active:hover:before {
+                        background: #E11E1E;
+                        border-color: #E11E1E;
+                        color: #fff;
+                        content: "\f00d";
+                    }
+                    &.radio-option.unselectable.active:hover:before {
+                        background: #E11E1E;
+                        border-color: #E11E1E;
+                        color: #fff;
+                        content: "\f00d";
+                    }
+                }
+            }
+
+        }
+        .dropdown-group-label {
+            min-height: 40px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin: 0.4rem 0;
+            padding: 0.8rem 0 0 1.5rem;
+        }
+        .dropdown-selectable-option {
+            padding: 1rem 1.5rem;
+            line-height: 1.3;
+            color: $grey-800;
+            background: #fff;
+            display: inline-block;
+            width: 100%;
+            min-height: 40px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            &:hover {
+                background: $grey-200;
+            }
+            .sub-label {
+                color: #A0AEC0;
+                font-size: 0.875em;
+            }
+
+            &.active {
+                &:nth-child(even):hover{
+                    background: #EDF2F7;
+                    color: #2D3748
+                }
+                &:hover:before {
+                    background: #ADABED;
+                    border-color: #A0AEC0;
+                    color: #fff;
+                }
+            }
+            &.checkbox-option {
+                padding-left: 3.75rem;
+                &:before {
+                    border-radius: 3px;
+                    font-family: "Font Awesome 5 Pro";
+                    content: "\f00c";
+                    font-size: 0.75rem;
+                    font-weight: 800;
+                    background: white;
+                    color: white;
+                    border: 1px solid #CBD5E0;
+                    text-align: center;
+                    padding-top: 0.45em;
+                    line-height: 1;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    display: block;
+                    position: absolute;
+                    left: 1.5rem;
+                }
+            }
+            &.radio-option {
+                padding-left: 3.75rem;
+                &:before {
+                    border-radius: 2rem;
+                    font-family: "Font Awesome 5 Pro";
+                    content: "\f00c";
+                    font-size: 0.75rem;
+                    font-weight: 800;
+                    background: white;
+                    color: white;
+                    border: 1px solid #CBD5E0;
+                    text-align: center;
+                    padding-top: 0.45em;
+                    line-height: 1;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    display: block;
+                    position: absolute;
+                    left: 1.5rem;
+                }
+            }
+        }
+        &:nth-child(even) .dropdown-selectable-option {
+            background: #F7FAFC;
+            border-color: #EDF2F7;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-color: #EDF2F7;
+            &:hover {
+                background: $grey-200;
+            }
+        }
+    }
+
+    &.multiselect--active {
+        .multiselect__placeholder {
+            display: block;
+        }
+        .multiselect__tags {
+            border: 1px solid #E2E8F0;
+            border-bottom: 1px solid transparent;
+            background: #fff;
+            box-shadow: 0px 3px 3px 0px rgba(113, 128, 150, 0.2);
+            color: #2D3748;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}

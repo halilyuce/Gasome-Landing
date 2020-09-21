@@ -1,0 +1,32 @@
+td,
+th {
+    &.test-name {
+        max-width: 250px;
+    } 
+    &.created {
+        @include responsive(1780) {
+            display: none;
+        }
+    }
+    &.last-tested {
+        @include responsive(1600) {
+            display: none;
+        }
+    }
+    &.frequency {
+        @include responsive(1300) {
+            display: none;
+        }
+    }
+    &.browser-status {
+        @include responsive(1200) {
+            display: none;
+        }
+    }
+    &.action {
+        @include responsive($small) {
+            display: none;
+        }
+    }
+}
+

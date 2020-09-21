@@ -1,0 +1,76 @@
+// Base
+@import 'base/reset';
+@import 'base/responsive';
+
+
+// Brand
+@import 'brand/colors';
+@import 'brand/animations';
+@import 'brand/content/typography';
+@import 'brand/content/code';
+
+$box-shadow-200: 0px 3px 3px 0px rgba($grey-600, 0.2);
+$box-shadow-400: 0px 10px 10px 0px rgba($grey-600, 0.2), 0px 20px 10px -20px rgba($grey-600, 0.1);
+$box-shadow-600: 0px 3px 3px 0px rgba($grey-600, 0.2);
+$box-shadow-800: 0px 3px 3px 0px rgba($grey-600, 0.2);
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+// Components
+
+@import 'components/navigation/primary-navigation';
+@import 'components/navigation/secondary-navigation';
+@import 'components/navigation/navigation-tabbed';
+@import 'components/navigation/small-nav';
+@import 'components/navigation/pagination';
+@import 'components/icons';
+@import 'components/scrollbars';
+@import 'components/table/table-defaults';
+@import 'components/table/table-cell-types';
+@import 'components/table/table-filter-bar';
+@import 'components/table/table-footer';
+@import 'components/badge';
+@import 'components/dropdown-options';
+@import 'components/buttons';
+@import 'components/forms/form-defaults';
+@import 'components/forms/form-elements-options';
+@import 'components/settings-sections';
+@import 'components/progress-bar';
+@import 'components/well';
+@import 'components/gallery';
+@import 'components/toast';
+@import 'components/editable-texts';
+@import 'components/switches';
+
+// Layouts
+@import 'layout/layout-master';
+@import 'layout/parts/page-header';
+@import 'layout/parts/page-footer';
+@import 'layout/settings-panel';
+@import 'layout/panel-stand-out';
+
+@import 'base/variables';
+
+@import 'templates/account-settings';
+@import 'templates/all-tests';
+@import 'templates/entry-pages';
+@import 'templates/onboarding';
+
+@import 'brand/colors';
+@import 'components/_icons';
+
+
+
+
+
+
+
+
+
+
+

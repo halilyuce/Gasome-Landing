@@ -1,0 +1,43 @@
+.page-footer {
+    margin-top: auto;
+    padding: 2rem;
+    border-top: 1px solid $grey-200;
+    @extend .page-spacing-padding;
+    font-size: 0.875rem;
+    color: $grey-500;
+    background-color: $white;
+    @include responsive($small) {
+        
+        margin-bottom: 0;
+    }
+    @include responsive($mobile) {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    a {
+        color: $grey-500;
+        &:hover {
+            color: $grey-700;
+            border-bottom: none;
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0 0;
+        @include responsive($mobile) {
+            justify-content: center;
+        }
+        li {
+            &:after {
+                content: " · ";
+                padding: 0 1rem;
+            }
+            &:last-of-type {
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}

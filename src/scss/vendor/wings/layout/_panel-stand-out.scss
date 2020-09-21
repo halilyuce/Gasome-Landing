@@ -1,0 +1,53 @@
+.panel-stand-out-container {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.panel-stand-out {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: 0px 3px 3px 0px rgba($grey-600, 0.2);
+    border-radius: 5px;
+    max-height: calc(100vh - 4rem); 
+    overflow: auto;
+    @extend .scrollbar-white;
+    .form-footer {
+        margin-top: 4rem;
+    }
+}  
+
+.dashboard.dashboard-panel {
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.run-test-setting,
+.webhook-config {
+    @extend .page-spacing-padding;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $grey-200;
+    header {
+        margin-bottom: 1rem;
+        p {
+            color: $grey-600; 
+        }
+    }
+}
+
+.switcher {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+    .switch {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        flex-grow: 2;
+        justify-items: center;
+    }
+}

@@ -1,0 +1,124 @@
+.form-item,
+input,
+label,
+div.helper,
+textarea {
+    width: 100%;
+}
+
+.form-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    &.form-item-half {
+        width: calc(50% - 0.5rem);
+        @include responsive($small) {
+            width: 100%;
+        }
+    }
+    &.form-item-75 {
+        width: calc(75% - 1rem);
+        @include responsive($small) {
+            width: 100%;
+        }
+    }
+    &.form-item-select {
+        input {
+            max-width: 300px;
+        }
+    }
+    .input-value-type-name {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        color: $grey-400;
+    }
+}
+
+input {
+    font-size: 1rem;
+    color: $grey-700;
+    border-radius: 5px;
+    border: 1px solid $grey-300;
+    padding: 0.875rem 1rem;
+    background: $grey-100;
+    margin: 0.1rem 0;
+
+    &:hover {
+        border-color: $grey-400;
+        background: $white;
+    }
+    &:focus {
+        background: $white;
+        border-color: $grey-500;
+    }
+    &:disabled {
+        background: $grey-300;
+        border-color: $grey-300;
+        color: $grey-500;
+        cursor: not-allowed;
+    }
+}
+@include placeholder {
+    font-style:italic;
+    color: $grey-500;
+    font-size: 0.9rem;
+}
+
+label {
+    color: $grey-700;
+    font-weight: 600;
+}
+
+div.helper {
+    height: 21px;
+    color: $grey-500;
+    font-size: 0.875rem;
+}
+
+.settings-page-form {
+    padding: 2rem;
+    @extend .page-spacing-padding;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    .form-item {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    @include responsive($small) {
+        flex-direction: column;
+        .form-item {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    @include responsive($small) {
+        flex-direction: column;
+    }
+    button {
+        margin-bottom: 1rem;
+        @include responsive($small) {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+        &+ button {
+            margin-left: 0.25rem;
+        }
+    }
+}

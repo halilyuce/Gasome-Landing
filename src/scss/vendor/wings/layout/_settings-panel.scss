@@ -1,0 +1,111 @@
+.settings-panel {
+    max-width: 960px;
+    &.settings-panel-form,
+    &.settings-panel-block,
+    &.settings-panel-controller,
+    &.settings-panel-block-image-header {
+        @extend .page-spacing-padding;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    &.settings-panel-table {
+        max-width: 100%;
+    }
+    &.settings-panel-controller {
+        background: $grey-200;
+        max-width: 100%;
+        .form-row {
+            max-width: 960px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            @include responsive($small) {
+                align-items: center;
+            }
+            input {
+                background: $white;
+            }
+            .form-item {
+                max-width: 270px;
+                margin-bottom: 0;
+                @include responsive($small) {
+                    max-width: 100%;
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .form-item-button {
+                flex-shrink: 2;
+                margin-top: 4px;
+            }
+        }
+        .well {
+            max-width: 660px;
+            @extend .page-spacing-padding;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            margin: 2rem auto;
+        }
+    }
+    &.settings-panel-block,
+    &.settings-panel-block-edgeless,
+    &.settings-panel-block-image-header {
+        header {
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid $grey-300;
+            h3 {
+                margin-top: 0;
+            }
+        }
+        p {
+            color: $grey-600;
+            max-width: 720px;
+            margin-bottom: 1rem;
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &.settings-panel-block {
+        @include responsive($mobile) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            header {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                &.content-table {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    &.settings-panel-block-edgeless {
+        header {
+            padding: 1.5rem;
+            padding-bottom: 0.75rem;
+            margin-bottom: 0;
+            border-bottom-color: $grey-200;
+        }
+    }
+    &.settings-panel-block-image-header {
+        header {
+            border-bottom: none;
+            margin-bottom: 0;
+            img {
+                max-width: 160px;
+            }
+        }
+    }
+    &.settings-panel-bordered {
+        border-bottom: 1px solid $grey-200;
+        padding-bottom: 3rem;
+    }
+}
+
+
+

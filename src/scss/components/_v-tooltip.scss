@@ -1,0 +1,180 @@
+.tooltip {
+  &.new-test-url-popover .popover-contents {
+    max-width: 400px;
+    border: 1px solid $grey-300;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: $box-shadow-200;
+    padding: 0.875rem 0.875rem 0 0.875rem ;
+  }
+
+  &.delete-popover{
+    .popover-contents {
+      max-width: 400px;
+      border: 1px solid $grey-300;
+      background: white;
+      border-radius: 9px;
+      box-shadow: $box-shadow-400;
+      padding: 0.875rem 0.875rem 0 0.875rem ;
+    }
+    .description strong{
+      font-style: italic;
+      color: $grey-800;
+    }
+}
+
+  &.title-popover {
+    max-width: 400px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: block !important;
+    z-index: 10000;
+
+    .tooltip-inner {
+      background: black;
+      color: white;
+      border-radius: 5px;
+      padding: 5px 10px 5px;
+    }
+
+    .tooltip-arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      margin: 5px;
+      border-color: black;
+      z-index: 1;
+    }
+  }
+
+  &.popover {
+    z-index: 99;
+    .tooltip-arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      margin: 5px;
+      border-color: black;
+      z-index: 1;
+    }
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      border-width: 0 5px 5px 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.new-test-url-popover .tooltip-arrow {
+      border-color: $grey-300;
+      border-width: 0 8px 8px 8px;
+      border-radius: 2px;
+      top: -8px;
+    }
+
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 5px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &.delete-popover .tooltip-arrow {
+      border-color: $grey-300;
+      border-width: 8px 8px 8px 0;
+      border-radius: 2px;
+      left: -8px;
+      top: calc(50% - 8px);
+    }
+
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &.delete-popover .tooltip-arrow {
+      border-color: $grey-300;
+      border-width: 8px 0 8px 8px;
+      border-radius: 2px;
+      right: -8px;
+      top: calc(50% - 8px);
+    }
+
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+}
+
+.action-buttons-popover {
+  ul {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .tooltip-arrow {
+    display: none;
+  }
+}
+
+.button-submenu.no-arrow {
+  .tooltip-arrow.popover-arrow {
+    opacity: 0.01%;
+  }
+}

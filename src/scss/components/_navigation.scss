@@ -1,0 +1,84 @@
+.master-navigation {
+    .account-info {
+        margin-top: auto;
+        color: $white;
+        .usage-stats {
+            @extend .page-spacing-margin;
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 1rem;
+            min-height: 130px;
+            background: $grey-800;
+            border-radius: 5px;
+            &:hover {
+                border: 1px solid gray;
+            }
+            h4 {
+                margin-top: 0;
+                color: $grey-600;
+                @extend .label-uppercase;
+            }
+            p {
+                font-weight: 600;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                padding: 0.5rem 0;
+                color: $grey-300;
+                strong {
+                    font-weight: 800;
+                }
+            }
+            span {
+                font-style: italic;
+                font-size: 0.75rem;
+                color: $grey-500;
+            }
+        }
+        .account-meta {
+            cursor: pointer;
+            margin-top: 2rem;
+            padding: 1rem;
+            line-height: 1;
+            min-height: 60px;
+            @extend .page-spacing-padding;
+            background: rgba($black,0.2);
+            h4 {
+                color: $grey-300;
+                margin-top: 0;
+                font-weight: 700;
+            }
+            &:hover {
+                background: rgba($black,0.4);
+                h4 {
+                    color: $white;
+                }
+            }
+            a {
+                color: $grey-600;
+                font-weight: 700;
+                font-size: 0.875rem
+            }
+        }
+    }
+}
+
+.navigation-toggle {
+    color: white;
+    cursor: pointer;
+    display: none;
+    @include responsive($mobile) {
+        display: inline;
+    }
+    &::before {
+        font-weight: 400;
+        @extend .icon;
+        font-size: 1.2rem;
+        content: "\f0c9";
+    }
+    .open & {
+        &:before {
+            @extend .icon;
+            content: "\f00d";
+        }
+    }
+}

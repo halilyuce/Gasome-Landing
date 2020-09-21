@@ -1,0 +1,47 @@
+.settipanel {
+    padding: 2rem; 
+    @extend .page-spacing-padding;
+    background: $grey-200;
+    border-bottom: 1px solid $grey-300;
+    input {
+        background: $white;
+    }
+    .form-item {
+        margin-bottom: 0;
+    }
+    button { 
+        margin-bottom: 1px;
+        @include responsive($small) {
+            width: 100%; 
+        }
+    }
+    .form-row {
+        justify-content: center;
+    }
+    .form-item.form-item-button {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        flex-shrink: 2;
+        margin-top: auto;
+    }
+    .well {
+        background: $white;
+        box-shadow: $box-shadow-400;
+        max-width: 680px;
+        padding-top: 2rem;
+        padding-bottom: 2rem; 
+        margin: 2rem auto 0.5rem;
+        @extend .page-spacing-padding;
+        border-radius: 5px;
+        h4 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        h5 {
+            color: $grey-600;
+            @extend .label-uppercase;
+            margin-top: 1rem;
+        }
+    }
+}  

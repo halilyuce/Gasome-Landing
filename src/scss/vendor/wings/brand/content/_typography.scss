@@ -1,0 +1,154 @@
+$system-font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$system-font-stack-mono: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+html {
+    font-family: $system-font-stack;
+}
+html,body {
+     font-size: 16px;
+     font-weight: 500;
+     color: $grey-800;
+     line-height: 1.75;
+     -webkit-font-smoothing: antialiased;
+     letter-spacing: 0.025em;
+     * {
+         letter-spacing: inherit;
+     }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    line-height: 1.5em;
+    margin-top: 0.75em;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    letter-spacing: 0;
+    strong {
+        font-weight: 800;
+    }
+    &.thin {
+        font-weight: 400;
+    }
+    &.caps {
+        text-transform: uppercase;
+    }
+}
+.small {
+    color: $grey-100;
+    font-size: 0.875rem;
+}
+
+h1,
+.h1 {
+    font-size: 1.75rem;
+    margin-top: 0;
+}
+
+h2,
+.h2 {
+    font-size: 1.6rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.4rem;
+}
+
+h4,
+.h4 {
+    font-size: 1rem;
+}
+
+ p {
+     margin-bottom: 1.6em;
+     &:last-of-type {
+         margin-bottom: 0;
+     }
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+em, i {
+    font-style: italic;
+}
+
+a {
+    color: $primary-500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    &:hover {
+        color: $primary-700;
+        border-bottom: 1px solid;
+    }
+    &:active,
+    &:focus {
+        color: $primary-700;
+        border-bottom: 1px dotted;
+    }
+    // &:visited {
+    //     color: darken($brand-primary, 15%);
+    // }
+    // &[target="_blank"] {
+    //     &:after {
+    //         @extend .icon;
+    //         content:"\eeca";
+    //         font-size: 0.7em;
+    //         opacity: 0.8;
+    //         margin-left: 0.2rem;
+    //     }
+    // }
+}
+
+pre,
+code {
+    font-family: $system-font-stack-mono;
+    background: $success-100;
+    font-size: 0.9rem;
+    border: 2px solid $success-500;
+    padding: 0.3rem 0.75rem 0.3rem;
+    line-height: 1;
+    color: $success-700;
+    border-radius: 5px;
+}
+
+
+.label-uppercase {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nb {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.text-overflow-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a {
+    &.link-subtle {
+        color: $grey-600;
+        @extend .link-small;
+        border-bottom: 1px solid $grey-400;
+    }
+    &.link-small {
+        font-size: 0.875rem;
+    }
+    &.link-block {
+        display: block;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}

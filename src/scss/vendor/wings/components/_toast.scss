@@ -1,0 +1,97 @@
+$toast-width: 700px;
+
+.ui-toast-list.component {
+  top: 2rem;
+  left: calc(50% - (#{$toast-width} / 2));
+  right: calc(50% - (#{$toast-width} / 2));
+  width: 100%;
+  max-width: $toast-width;
+  position: fixed;
+  z-index: 9999;
+  @media(max-width: 700px) {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
+
+.ui-toast.component {
+  padding: 10px 30px 10px 10px;
+  position: relative;
+  margin-bottom: 1rem;
+  box-shadow: 0px 11px 7px -8px rgba($destructive-900, 0.3),
+              0px 3px 14px -1px rgba($destructive-900, 0.1);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  &:before {
+    @extend .icon;
+    margin-right: 0.5rem;
+    margin-left: 0.25rem;
+    font-weight: 600;
+  }
+
+  button {
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 0.6em);
+    padding: 0px;
+    font-size: 1.3rem;
+    color: $grey-700;
+    &:hover {
+      color: inherit;
+    }
+  }
+  &.warning {
+    background: lighten($warning-100, 3%);
+    color: $warning-800;
+    box-shadow: 0px 11px 7px -8px rgba($warning-900, 0.13),
+              0px 3px 14px -1px rgba($warning-900, 0.1);
+    border: 2px solid desaturate($warning-200, 50%);
+    &:before {
+      content: "\f071";
+      color: $warning-700;
+    }
+    button {
+      color: $warning-700;
+      &:hover {
+        color: $warning-900;
+      }
+    }
+  }
+  &.error {
+    background: lighten($destructive-100, 3%);
+    color: $destructive-700;
+    box-shadow: 0px 11px 7px -8px rgba($destructive-900, 0.13),
+              0px 3px 14px -1px rgba($destructive-900, 0.1);
+    border: 2px solid desaturate($destructive-200, 50%);
+    &:before {
+      content: "\f2f0";
+      color: $destructive-700;
+    }
+    button {
+      color: $destructive-700;
+      &:hover {
+        color: $destructive-900;
+      }
+    }
+  }
+  &.success {
+    background: lighten($success-100, 1%);
+    color: $success-800;
+    box-shadow: 0px 11px 7px -8px rgba($success-900, 0.13),
+              0px 3px 14px -1px rgba($success-900, 0.1);
+    border: 2px solid desaturate($success-200, 50%);
+    &:before {
+      content: "\f00c";
+      color: $success-700;
+    }
+    button {
+      color: $success-700;
+      &:hover {
+        color: $success-900;
+      }
+    }
+  }
+}

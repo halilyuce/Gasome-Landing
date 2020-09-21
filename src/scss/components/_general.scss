@@ -1,0 +1,61 @@
+// fix for select inside table. Without this options in notifications are not visible.
+.content.content-table {
+  overflow-x: initial;
+}
+
+.content.content-table > div {
+  width: 100%;
+}
+
+.content.content-table td.with-select{
+  overflow: initial;
+}
+
+.article {
+  margin-left: 10px;
+}
+
+// row which acts as check/uncheck in browsers and screen sizes settings
+tr.clickable-row {
+  cursor: pointer;
+}
+
+.article.article-tour:before {
+  content: "\f03d";
+}
+
+
+.validation-errors {
+  min-height: 15px;
+}
+
+.gallery-screenshot img {
+  height: 100%;
+}
+
+.ui-table {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .ui-table {
+    overflow-x: auto;
+  }
+}
+
+.dropdown-hover-helper {
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    width: 60px;
+    height: 50px;
+    transform: rotate(-45deg);
+    background: transparent;
+  }
+}
+
+.handle {
+  cursor: move;
+}

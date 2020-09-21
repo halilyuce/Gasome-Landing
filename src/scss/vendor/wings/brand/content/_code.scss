@@ -1,0 +1,9 @@
+.code {
+    font-style: $system-font-stack-mono;
+    &.code-success {
+        color: $grey-100;
+        background: $grey-700;
+        padding: 0.2rem 0.7rem;
+        border-radius: 20px;
+    }
+}

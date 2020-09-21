@@ -1,0 +1,60 @@
+.navigation-tabbed {
+    ul {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $grey-200;
+        li {
+            padding: 1rem 0 0.875rem;
+            @extend .page-spacing-padding;
+            a {
+                display: inline-block;
+                font-weight: 600;
+                font-size: 0.875rem;
+                position: relative;
+                color: $grey-600;
+                border-bottom: none;
+                &:hover {
+                    color: $primary-600;
+                   
+                }
+                &:before {
+                    @extend .icon; 
+                    font-weight: 400;
+                    margin-right: 0.5rem;
+                    color: $grey-500;
+                }
+            }
+            
+            &.selected {
+                a {
+                    color: $primary-500;
+                    &:after {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -0.875rem;
+                        content: "";
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        height: 4px;
+                        background: $primary-500;
+                    }
+                    &:before {
+                        color: $primary-400;
+                    }
+                }
+            }
+            a.btn-link-test-results {
+                &:before {
+                    content: "\f550";
+                }
+            }
+            a.btn-link-edit-steps {
+                &:before {
+                    content: "\f044";
+                }
+            }
+        }
+
+    }
+}

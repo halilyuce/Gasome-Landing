@@ -1,0 +1,42 @@
+.extension-install-wrapper {
+    margin: 0 auto;
+    max-width: 350px;
+}
+.extension-not-found {
+    padding: 0 1rem;
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+.install-extension {
+    &-header {
+        margin-bottom: 1rem;
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        p {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: $grey-600;
+            line-height: 1.5;
+        }
+    }
+    &-footer {
+        text-align: center;
+        margin-bottom: 1rem;
+        p {
+            display: none;
+            font-size: 0.875rem;
+            color: $grey-600;
+            line-height: 1.5;
+        }
+        &.open {
+            p {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+// POPOVER
+.v-popover {
+  &.open {
+    .ellipsis-dropdown {
+      &:before {
+        background: $grey-400;
+        color: $grey-600;
+      }
+    }
+  }
+}

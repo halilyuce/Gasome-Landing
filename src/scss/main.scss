@@ -1,0 +1,25 @@
+@import 'vendor/wings/wings';
+@import 'vendor/grid/flexible-grid';
+@import 'custom';
+// Vendor
+@import 'vendor/vue-multiselect/vue-multiselect';
+
+// Custom styles
+@import 'components/install-extension';
+@import 'components/navigation';
+@import 'components/multiselect';
+@import 'components/v-tooltip';
+@import 'components/v-popover';
+@import 'components/forms';
+@import 'components/components';
+@import 'components/general';
+@import 'components/gallery';
+@import 'components/codeMirror';
+@import 'components/wizard';
+@import 'components/pricing-box';
+@import 'components/insight';
+@import 'templates/test-details';
+@import 'templates/onboarding';
+
+
+

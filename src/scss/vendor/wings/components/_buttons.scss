@@ -1,0 +1,350 @@
+.button {
+    @extend button;
+}
+
+button {
+    background: $primary-500;
+    color: $white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 5px;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include responsive($mobile) {
+        padding: 1.5em;
+        display: block;
+    }
+    &:hover,
+    &:focus {
+        background: $primary-700;
+    }
+    &.button-100 {
+        font-size: 0.75rem;
+        padding: 0.5em 0.75em;
+    }
+    &.button-200 {
+        font-size: 0.75rem;
+        padding: 0.75em 1.25em;
+    }
+    &.button-400 {
+        font-size: 1rem;
+    }
+
+    &.button-600 {
+        font-size: 1.25rem;
+    }
+
+    &.button-800 {
+        font-size: 1.5rem;
+    }
+    &.button-block {
+        width: 100%;
+    }
+    &:disabled {
+        cursor: default;
+    }
+    &.button-primary {
+        background: $primary-500;
+        &:hover,
+        &:focus {
+            background: $primary-700;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $primary-200;
+        }
+    }
+    &.button-secondary {
+        background: $secondary-500;
+        &:hover {
+            background: $secondary-600;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $secondary-200;
+        }
+    }
+    &.button-success {
+        background: $success-600;
+        &:hover,
+        &:focus {
+           background: $success-800;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $success-200;
+        }
+    }
+    &.button-warning {
+        background: $warning-400;
+        color: $warning-700;
+        &:hover,
+        &:focus {
+            background: $warning-600;
+            color: $warning-900;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $warning-200;
+        }
+    }
+    &.button-dark {
+        background: $grey-900;
+        color: $white;
+        &:hover,
+        &:focus {
+            background: $grey-600;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $warning-200;
+        }
+    }
+    &.button-destructive {
+        background: $destructive-500;
+        &:hover,
+        &:focus {
+            background: $destructive-700;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $destructive-200;
+            pointer-events: none;
+        }
+        &.button-outline {
+            background: transparent;
+            border: 2px solid $destructive-500;
+            color: $destructive-500;
+            &:hover {
+                border-color: $destructive-700;
+                background: $destructive-700;
+                color: $white;
+            }
+            &:disabled {
+                border-color: $destructive-200;
+                color: $destructive-200;
+            }
+        }
+    }
+    &.button-grey {
+        background: $grey-500;
+        &:hover,
+        &:focus {
+            background: $grey-700;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $grey-200;
+            pointer-events: none;
+        }
+        &.button-outline {
+            background: transparent;
+            border: 2px solid $grey-500;
+            color: $grey-500;
+            &:hover {
+                border-color: $grey-700;
+                background: $grey-700;
+                color: $white;
+            }
+            &:disabled {
+                border-color: $grey-200;
+                color: $grey-200;
+            }
+        }
+    }
+    &.button-neutral {
+        background: $grey-300;
+        color: $grey-600;
+        &:hover,
+        &:focus {
+            background: $grey-400;
+            color: $grey-700;
+        }
+        &:disabled,
+        &:disabled:hover {
+            background: $grey-200;
+            color: $grey-400;
+        }
+    }
+    &.button-ghost {
+        background: none;
+        color: $grey-500;
+        font-weight: 600;
+        &:hover,
+        &:focus {
+            color: $grey-700;
+            background: none;
+        }
+        &:disabled,
+        &:disabled:hover {
+            display: none;
+        }
+        &.button-destructive {
+            color: $destructive-700;
+            &:hover {
+                color: $destructive-500;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.ellipsis-dropdown {
+        padding: 0;
+        background: transparent;
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        &:before {
+            @extend .icon;
+            content: "\f142";
+            line-height: 1;
+            padding: 0.5rem 0.65rem 0.4rem;
+            border-radius: 5px;
+            color: $grey-500;
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
+        &:hover,
+        &.open {
+            &:before {
+                background: $grey-400;
+                color: $grey-600;
+            }
+            .dropdown-contents {
+                display: block;
+            }
+        }
+        .dropdown-contents {
+            background: $white;
+            border-radius: 5px;
+            box-shadow: $box-shadow-400;
+            color: $grey-700;
+            z-index: 2;
+            display: none;
+            position: absolute;
+            left: -190px;
+            height: auto;
+            width: 190px;
+            margin-top: 5px;
+            &:before {
+                width: 0;
+                height: 0;
+                top: -25px;
+                position: relative;
+                right: 3px;
+                content: "";
+                border-top: 10px solid transparent;
+                border-left: 10px solid transparent;
+                border-right:10px solid transparent;
+                border-bottom: 10px solid $white;
+            }
+
+            ul {
+                margin-top: -16px;
+                li {
+                    a {
+                        text-align: left;
+                        display: block;
+                        color: $grey-600;
+                        font-size: 0.875rem;
+                        padding:1rem 1rem;
+                        border-bottom: 0;
+                        font-weight: 600;
+                        &:hover {
+                            background: $grey-200;
+                        }
+                    }
+                    &:nth-child(even) {
+                        a {
+                            background: $grey-100;
+                            &:hover {
+                                background: $grey-200;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.btn {
+    cursor: pointer;
+}
+a.button-hollow,
+.button-hollow {
+    @extend .button-ghost;
+    border: 2px solid;
+    border-bottom: 2px solid;
+    &:hover {
+        border-bottom: 2px solid;
+    }
+}
+
+.button-block {
+    padding: 2rem 0 0;
+    h4 {
+        padding-bottom: 1rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        li {
+            margin: 0 1rem;
+
+        }
+
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    button {
+        border-radius: 0;
+        border-left: 1px solid rgba(0,0,0,0.15);
+        &:first-of-type {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        &:last-of-type {
+            border-right: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        &.button-caret {
+            padding-left: 1em;
+            padding-right: 1em;
+            &:after {
+                content: "\f078";
+                position: relative;
+                top: 0.1em;
+                @extend .icon;
+            }
+        }
+    }
+    &.dropdown-contents {
+        left: 0px;
+        width: 100%;
+        ul {
+            margin-top: 0px;
+        }
+    }
+}
+
+.change-password-button {
+    position: absolute;
+    top: 0; right: 0;
+    cursor: pointer;
+}
+
+.account-webhooks {
+    .button-destructive {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+.pulsing-primary-100 {
+    animation-name: pulsing-primary-100;
+    @extend .pulsing;
+}
+
+.pulsing {
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes pulsing-primary-100 {
+    0% {
+        background: $primary-100;
+    }
+
+    50% {
+        background: $primary-200;
+    }
+    100% {
+        background: $primary-100;
+    }
+}
+
+.slide-leave-active {
+    transition: all .7s;
+}
+.slide-enter-active {
+    transition: all .3s;
+}
+.slide-enter {
+    transform: translate(0, 100%);
+}
+.slide-leave-to {
+    transform: translate(0, -25vh);
+}
