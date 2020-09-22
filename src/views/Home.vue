@@ -4,25 +4,36 @@
     <div class="content">
       <div class="container">
         <div class="row d-flex flex-wrap">
-          <div class="column description xs-12 sm-6">
+          <div class="column description xs-12 md-4">
             <p>
               <span class="label mr-10">#GAMER</span>
-              <span class="label">#SOCIALMEDIA</span>
+              <span class="label label-warning">#SOCIALMEDIA</span>
             </p>
             <h1>Gamer Social Media</h1>
             <p>
               It is a Social Media App based on games for gamers.
             </p>
             <p>
-              It provides game swapping feature to users. Users can swap their
-              games with other users and they can reach thousands of games
-              easily.
-            </p>
-            <p>
               You can find the closest gamers to you easily. Explore new games
               and meet with gamers around you.
             </p>
-            <p>Create your account and start to swiping games!</p>
+            <p>Create your account and interact to other gamers!</p>
+          </div>
+          <div class="column xs-12 md-4">
+            <div class="iphone-x">
+              <i>Speaker</i>
+              <b>Camera</b>
+              <video
+                autoplay=""
+                autobuffer=""
+                muted=""
+                playsinline=""
+                poster="@/assets/iphone_welcome_bg.jpg"
+              >
+                <source src="@/assets/iphone_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
             <div class="download-btn">
               <a
                 href="https://apps.apple.com/us/app/id1527982009"
@@ -42,21 +53,20 @@
               /></a>
             </div>
           </div>
-          <div class="column xs-12 sm-6">
-            <div class="iphone-x">
-              <i>Speaker</i>
-              <b>Camera</b>
-              <video
-                autoplay=""
-                autobuffer=""
-                muted=""
-                playsinline=""
-                poster="@/assets/iphone_welcome_bg.jpg"
-              >
-                <source src="@/assets/iphone_video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+          <div class="column description align-left xs-12 md-4">
+            <p>
+              <span class="label label-warning mr-10">#SWAP</span>
+              <span class="label">#GAMES</span>
+            </p>
+            <h1>Swap Games</h1>
+            <p>
+              It is also a game swapping App for gamers.
+            </p>
+            <p>
+              Users can swap their games with other users and they can reach
+              thousands of games easily.
+            </p>
+            <p>Create your account and start to swapping games!</p>
           </div>
         </div>
       </div>

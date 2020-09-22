@@ -6,8 +6,15 @@
           <Logo />
         </div>
         <div class="header-right">
-          <button class="button-ghost">Help</button>
-          <button>Contact Us</button>
+          <div class="social-links">
+            <a href="https://twitter.com/gasomecom" target="blank">
+              <fa icon="twitter" type="fab" class="icon"></fa>
+            </a>
+            <a href="https://instagram.com/gasomeapp" target="blank">
+              <fa icon="instagram" type="fab" class="icon"></fa>
+            </a>
+          </div>
+          <button v-on:click="sendMail" class="button-200">Contact Us</button>
         </div>
       </div>
     </div>
@@ -21,6 +28,11 @@ import Logo from "@/components/Logo.vue";
 @Options({
   components: {
     Logo
+  },
+  methods: {
+    sendMail: function() {
+      window.open("mailto:support@gasome.com");
+    }
   }
 })
 export default class Header extends Vue {}

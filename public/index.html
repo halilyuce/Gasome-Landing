@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://gasome.com" />
+    <meta name="twitter:title" content="Gasome" />
+    <meta name="twitter:description" content="Gamer Social Media" />
+    <meta name="twitter:image" content="<%= BASE_URL %>appIcon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gasome" />
+    <meta property="og:description" content="Gamer Social Media" />
+    <meta property="og:image" content="<%= BASE_URL %>appIcon.png" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>GASOME | Gamer Social Media</title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
