@@ -15,7 +15,7 @@ header {
   }
   .header-right {
     display: flex;
-    justify-content: center;
+    align-items: center;
     .social-links {
       @include responsive($mobile) {
         display: none;
@@ -191,7 +191,6 @@ footer {
 }
 
 .iphone-x {
-  display: flex;
   z-index: 1;
   overflow: hidden;
   position: relative;

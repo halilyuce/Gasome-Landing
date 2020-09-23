@@ -14,7 +14,7 @@
               <fa icon="instagram" type="fab" class="icon"></fa>
             </a>
           </div>
-          <button v-on:click="sendMail" class="button-200">Contact Us</button>
+          <button v-on:click="sendMail">Contact Us</button>
         </div>
       </div>
     </div>
