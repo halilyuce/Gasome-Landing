@@ -2,47 +2,57 @@ header {
   .header-logo {
     display: flex;
     align-items: center;
+
     a {
-        display: flex;
+      display: flex;
       border-bottom: none;
     }
+
     svg {
       max-width: 192px;
       max-height: 45px;
-      filter: invert(20%) sepia(54%) saturate(3556%) hue-rotate(233deg)
-        brightness(97%) contrast(88%);
+      filter: invert(20%) sepia(54%) saturate(3556%) hue-rotate(233deg) brightness(97%) contrast(88%);
     }
   }
+
   .header-right {
     display: flex;
     align-items: center;
+
     .social-links {
       @include responsive($mobile) {
         display: none;
       }
+
       display: flex;
       justify-content: center;
       margin-right: 1rem;
+
       a {
         display: flex;
         justify-content: center;
         border-bottom: none;
         color: $grey-600;
+
         &:hover {
           color: $primary-600;
         }
+
         .icon {
           margin: 0 0.75rem;
         }
       }
     }
   }
+
   .navigation-links {
     display: flex;
     flex-direction: row;
     align-self: center;
+
     li {
       margin: 0 1rem;
+
       a {
         font-weight: 700;
         font-size: 0.875rem;
@@ -66,6 +76,7 @@ footer {
   padding-bottom: 50px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.05);
   margin-top: auto;
+
   #scroll-indicator {
     height: 9px;
     width: 90px;
@@ -74,24 +85,30 @@ footer {
     margin: 25px;
     opacity: 0.2;
   }
+
   .nav {
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
+
     li {
       margin: 20px;
+
       a {
         color: $primary-200;
         text-decoration: none;
       }
     }
   }
+
   #team {
     margin-bottom: 40px;
+
     a {
       margin: 10px;
     }
   }
+
   .legals {
     padding: 10px 20px 10px 20px;
     font-size: 0.85em;
@@ -105,34 +122,43 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 60vh;
+
   @include responsive($table-stacked) {
     margin-top: 2rem;
   }
+
   .description {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @include responsive($table-stacked) {
       margin-top: 1rem;
       align-items: center;
       text-align: center;
     }
   }
+
   .download-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 3rem 0;
+
     a {
       margin-right: 1rem;
+
       &:hover {
         border-bottom: none;
       }
     }
   }
+
   .align-left {
     align-content: flex-end;
     text-align: end;
+
     @include responsive($table-stacked) {
       align-content: center;
       text-align: center;
@@ -158,32 +184,39 @@ footer {
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 700;
+
   i {
     margin-right: 0.5em;
     font-size: 1.25em;
     position: relative;
   }
+
   &.label-primary {
     background: $primary-100;
     color: $primary-600;
   }
+
   &.label-secondary {
     background: lighten($secondary-100, 1%);
     color: $secondary-500;
   }
+
   &.label-grey,
   &.label-neutral {
     background: $grey-300;
     color: $grey-700;
   }
+
   &.label-success {
     background: $success-200;
     color: $success-700;
   }
+
   &.label-warning {
     background: $warning-200;
     color: $warning-700;
   }
+
   &.label-destructive {
     background: $destructive-100;
     color: $destructive-600;
@@ -304,9 +337,13 @@ footer {
     border-radius: 50%;
     left: 30px;
 
-    & + span {
+    &+span {
       left: auto;
       right: 30px;
     }
   }
+}
+
+.flex-column {
+  flex-direction: column;
 }
